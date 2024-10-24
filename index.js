@@ -1,16 +1,22 @@
 const express = require('express');
-const app = express();
 const path = require('path');
+const app = express();
+const port = 3000;
 
-// Configura a pasta 'public' para servir arquivos estáticos (HTML, CSS, etc.)
+// Servir arquivos estáticos da pasta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Rota principal que envia o arquivo HTML
+// Rota raiz redirecionando para a página de login
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'login.html')); // Redireciona para login.html
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+// Rota para a página de formulário
+app.get('/formulario', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'formulario.html')); // Serve formulario.html
+});
+
+// Iniciar o servidor
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
 });
