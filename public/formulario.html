@@ -9,36 +9,464 @@
     <!-- <link rel="stylesheet" href="styles.css"> -->
 </head>
 <body>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+<div style="display: flex;">
+    <div style="padding: 40px;">
+        <h1 style="text-align: center;">13º MÊS DE DOCÊNCIA: FORMULÁRIO PARA SOLICITAÇÃO DE AVALIAÇÃO DA CHEFIA IMEDIATA PARA PROCESSO DE AVALIAÇÃO DE ESTÁGIO PROBATÓRIO DOCENTE</h1>
+        <p>O docente deve solicitar a abertura do processo de avaliação junto ao setor de PROTOCOLO do Campus Pau
+            dos
+            Ferros. O processo deverá ser encaminhado à Comissão de Avaliação Docente (CAD) do Campus, através do
+            e-mail
+            protocolo.pdf@ufersa.edu.br.</p>
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
+        <ul>
+            Documentos Necessários:
+            <li>Requerimento padrão.</li>
+            <li>Formulário de solicitação de Abertura de Processo de Avaliação de Estágio Probatório.</li>
+            <li>Avaliação discente (se disponível) – acessível via SIGAA, na seção “Avaliação Institucional”, onde é
+                possível
+                visualizar gráficos e resultados anteriores.</li>
+        </ul>
+        <h3>Observação:</h3>
+        <p>Se o processo de avaliação for iniciado dentro do prazo estabelecido, não é necessário apresentar
+            documentos
+            adicionais. No entanto, se o processo for aberto fora do prazo, o docente deverá encaminhar uma
+            justificativa
+            explicando o motivo do atraso.</p>
+    </div>
+</div>
+<nav>
+    <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+            type="button" role="tab" aria-controls="nav-home" aria-selected="true">Requerimento padrão</button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Documento de
+            formulário</button>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <!-- primeiro arquivo -->
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <form id="requerimento-form">
+            <div
+                style="text-align: center; display: flex; justify-content: center; align-items: center; gap: 30px;">
+                <img src="assets/img/requerimento-padrao/logo-ufersa.png" alt="logo da ufersa" width="180px"
+                    style="margin-right: 20px;">
+                <span style="font-weight: bold;">MINISTÉRIO DA EDUCAÇÃO <br>UNIVERSIDADE FEDERAL RURAL DO SEMI-ÁRIDO
+                    <br>
+                    PRÓ-REITORIA DE
+                    GESTÃO DE PESSOAS</span>
+                <img src="assets/img/requerimento-padrao/progepe.png" alt="logo da progepe" width="150px"
+                    style="margin-left: 20px;">
+            </div>
+            <h2>Requerimento</h2>
+            <table border="1" cellpadding="10" cellspacing="0" border-collapse: collapse;>
+                <tr>
+                    <th colspan="2" style="text-align: left; background-color: #BFBFBF;">IDENTIFICAÇÃO DO REQUERENTE
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <label for="nome">Nome:</label> <input type="text" id="nome" name="nome" required>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <label for="matricula">Matrícula SIAPE:</label>
+                            <input type="text" id="matricula" name="matricula" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <label for="endereco">Endereço:</label>
+                            <input type="text" id="endereco" name="endereco" required>
+                        </div>
+                    </td>
 
-        .red {
-            color: red;
-        }
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <label for="cidade_estado">Cidade/Estado:</label>
+                            <input type="text" id="cidade_estado" name="cidade_estado" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <label for="telefone">Telefone(s) com DDD:</label>
+                            <input type="tel" id="telefone" name="telefone" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <label for="cargo">Cargo/Emprego/Função:</label>
+                            <input type="text" id="cargo" name="cargo" required>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <label for="codigo">Código/Nível/Referência:</label>
+                            <input type="text" id="codigo" name="codigo" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <label for="unidade">Unidade de Lotação:</label>
+                            <input type="text" id="unidade" name="unidade" required>
+                        </div>
 
-        .editable {
-            border-bottom: 1px dashed gray;
-            display: inline-block;
-        }
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="border-bottom: 0;padding-bottom: 0;">
+                        <strong style="font-size: 16px;">Tipo de Vínculo com a UFERSA:</strong>
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                            <div style="display: flex; align-items: center;">
+                                <input type="radio" id="servidor" name="vinculo" value="servidor" required>
+                                <label for="servidor" style="margin-left: 5px; ">Servidor(a)
+                                    Ativo(a)</label>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <input type="radio" id="aposentado" name="vinculo" value="aposentado">
+                                <label for="aposentado" style="margin-left: 5px; ">Aposentado(a)</label>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <input type="radio" id="professor_substituto" name="vinculo"
+                                    value="professor_substituto">
+                                <label for="professor_substituto" style="margin-left: 5px; ">Professor(a)
+                                    Substituto(a), Visitante ou Téc. Temporário(a)</label>
+                            </div>
+                    </td>
+                </tr>
+                <td colspan="2" style="border-top: 0; padding-top: 8;">
+                    <div style="display: flex; flex-direction: column;">
+                        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                            <input type="radio" id="pensionista_civil" name="vinculo" value="pensionista_civil">
+                            <label for="pensionista_civil" style="margin-left: 5px;">Beneficiário de Pensão Civil
+                                do(a)
+                                Servidor(a)</label>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <input type="radio" id="pensionista_alimenticia" name="vinculo"
+                                value="pensionista_alimenticia">
+                            <label for="pensionista_alimenticia" style="margin-left: 5px;">Beneficiário de Pensão
+                                Alimentícia do(a) Servidor(a)</label>
+                        </div>
+                    </div>
+                </td>
 
-        .signature {
-            margin-top: 40px;
-            text-align: center;
-        }
+                <tr>
+                    <th colspan="2" style="text-align: left; background: #BFBFBF;">OBJETIVO DO REQUERIMENTO
+                    </th>
+                </tr>
 
-        [contenteditable] {
-            outline: none;
-        }
-    </style>
+                <tr>
+                    <td>
+                        <div style="display: flex; flex-wrap: wrap; gap: 90px;">
+                            <div style="flex: 1 1 50%;">
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" id="insalubridade_periculosidade" name="benefits"
+                                        value="insalubridade_periculosidade">
+                                    <label for="insalubridade_periculosidade" style="margin-left: 8px;">ADICIONAL DE
+                                        INSALUBRIDADE/PERICULOSIDADE</label>
+                                </div>
+
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" id="abono_permanencia" name="benefits"
+                                        value="abono_permanencia">
+                                    <label for="abono_permanencia" style="margin-left: 8px;">ABONO
+                                        PERMANÊNCIA</label>
+                                </div>
+
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" id="afastamento_licenca" name="benefits"
+                                        value="afastamento_licenca">
+                                    <label for="afastamento_licenca"
+                                        style="margin-left: 8px;">AFASTAMENTO/LICENÇA</label>
+                                </div>
+
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" id="alteracao_afastamento" name="benefits"
+                                        value="alteracao_afastamento">
+                                    <label for="alteracao_afastamento" style="margin-left: 8px;">ALTERAÇÃO DE
+                                        ALTERAÇÃO DE AFASTAMENTO/LICENÇA</label>
+                                </div>
+
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" id="alteracao_retribuicao_titulacao" name="benefits"
+                                        value="alteracao_retribuicao_titulacao">
+                                    <label for="alteracao_retribuicao_titulacao" style="margin-left: 8px;">ALTERAÇÃO
+                                        DE
+                                        ALTERAÇÃO DE RETRIBUIÇÃO POR TITULAÇÃO</label>
+                                </div>
+
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" id="aposentadoria" name="benefits" value="aposentadoria">
+                                    <label for="aposentadoria" style="margin-left: 8px;">APOSENTADORIA</label>
+                                </div>
+
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" id="auxilios" name="benefits" value="auxilios">
+                                    <label for="auxilios" style="margin-left: 8px;">AUXÍLIOS</label>
+                                </div>
+
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" id="expedicao_certificado" name="benefits"
+                                        value="expedicao_certificado">
+                                    <label for="expedicao_certificado" style="margin-left: 8px;">AVERBAÇÃO DE TEMPO
+                                        DE
+                                        SERVIÇO</label>
+                                </div>
+
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" id="expedicao_certificado" name="benefits"
+                                        value="expedicao_certificado">
+                                    <label for="expedicao_certificado" style="margin-left: 8px;">EXPEDIÇÃO DE
+                                        CERTIFICADO</label>
+                                </div>
+                            </div>
+                    </td>
+                    <td>
+                        <div style="flex: 1 1 50%;">
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" id="gratificacao_curso_concurso" name="benefits"
+                                    value="gratificacao_curso_concurso">
+                                <label for="gratificacao_curso_concurso" style="margin-left: 8px;">GRATIF. POR
+                                    ENCARGO DE
+                                    CURSO/CONCURSO</label>
+                            </div>
+
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" id="incentivo_qualificacao" name="benefits"
+                                    value="incentivo_qualificacao">
+                                <label for="incentivo_qualificacao" style="margin-left: 8px;">INCENTIVO À
+                                    QUALIFICAÇÃO</label>
+                            </div>
+
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" id="inclusao_dependentes" name="benefits"
+                                    value="inclusao_dependentes">
+                                <label for="inclusao_dependentes" style="margin-left: 8px;">INCLUSÃO/EXCLUSÃO DE
+                                    DEPENDENTES</label>
+                            </div>
+
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" id="pensao_civil" name="benefits" value="pensao_civil">
+                                <label for="pensao_civil" style="margin-left: 8px;">PENSÃO CIVIL</label>
+                            </div>
+
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" id="progressao_promocao" name="benefits"
+                                    value="progressao_promocao">
+                                <label for="progressao_promocao"
+                                    style="margin-left: 8px;">PROGRESSÃO/PROMOÇÃO</label>
+                            </div>
+
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" id="progressao_capacitacao" name="benefits"
+                                    value="progressao_capacitacao">
+                                <label for="progressao_capacitacao" style="margin-left: 8px;">PROGRESSÃO POR
+                                    CAPACITAÇÃO/MÉRITO</label>
+                            </div>
+
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" id="auxilios" name="benefits" value="auxilios">
+                                <label for="auxilios" style="margin-left: 8px;">REMOÇÃO</label>
+                            </div>
+
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" id="revisao_aposentadoria" name="benefits"
+                                    value="revisao_aposentadoria">
+                                <label for="revisao_aposentadoria" style="margin-left: 8px;">REVISÃO DE
+                                    APOSENTADORIA</label>
+                            </div>
+
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <label for="outro" style="margin-left: 5px;">OUTRO. ESPECIFIQUE: </label>
+                                <input type="text" id="outro" name="benefits">
+                            </div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2" style="text-align: left; background-color: #BFBFBF;">DESCRIÇÃO/JUSTIFICATIVA DO
+                        REQUERIMENTO</th>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" style="width: 100%; height: 150px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div>
+                            <p style="font-size: 13px;margin-bottom: 50px;">Encaminhe-se à Pró-Reitoria de Gestão de
+                                Pessoas.</p>
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                            <label for="data" style="margin-right: 10px; white-space: nowrap;">Data:</label>
+                            <input type="date" id="formatted-date" name="data" required
+                                style="margin-right: 50px; width: 150px;">
+                            <div id="signature" class="signature">
+                                Assinatura do(a) Servidor(a)/Requerente
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+    </div>
+    </table>
+
+    <div style="font-family: 'Times New Roman', Times, serif; margin-left: 20px;">
+        <h4 style="margin-top: 0; margin-bottom: 0;">PROCEDIMENTOS</h4>
+        <div style="margin-left: 10px; font-size: 12px;">
+            1. Preencher, imprimir e assinar o presente formulário; <br>
+            2. Anexar documentação comprobatória (se for o caso); <br>
+            3. Entregar na PROGEPE ou no Setor de Gestão de Pessoas do Campus no qual esteja lotado(a).
+        </div>
+    </div>
+    </form>
+    <div class="button-container">
+        <input type="button" id="generate-pdf" value="Gerar PDF">
+    </div>
+</div>
+<!-- fim do primeiro arquivo -->
+
+<!-- segundo arquivo -->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <form id="requerimento-formdois">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <img src="assets/img/requerimento-padrao/lofo-ufersa-dark.png" height="120px" alt="logo ufersa">
+            <span style="display: block; margin-top: 0px;">MINISTÉRIO DA EDUCAÇÃO <br>
+                <strong>UNIVERSIDADE FEDERAL RURAL DO SEMI-ÁRIDO</strong><br>
+                COMISSÃO DE AVALIAÇÃO DOCENTE
+            </span>
+        </div>
+
+        <h2 style="font-size: 18px">FORMULÁRIO PARA SOLICITAÇÃO DE AVALIAÇÃO DE ESTÁGIO PROBATÓRIO DOCENTE</h2>
+
+        <div style="padding: 30px; text-align: justify;">
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eu, <span id="nome" class="editable red" contenteditable="true"
+                style="color: red;">(colocar o
+                nome
+                completo)</span>,
+            solicito à Comissão de Avaliação Docente do
+            <span id="chefe" class="editable red" contenteditable="true" style="color: red;">(Centro de XXXXXX –
+                CAD/XXX)</span>,
+            – a avaliação do desempenho em Estágio Probatório, sendo o meu regime de trabalho
+            <span id="avaliacao" class="editable red" contenteditable="true" style="color: red;">40 horas com
+                dedicação exclusiva
+                (ou 20 horas semanais ou 40 horas semanais)</span>.
+            </br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Anexo a este pedido os seguintes documentos conforme RESOLUÇÃO
+            CONSUNI/UFERSA Nº005/2017:
+            </br></br>
+            <ul style="list-style-type: none;">
+                <li><span id="numero" class="editable red" contenteditable="true" style="color: red;">- Avaliação do
+                        docente pelo
+                        discente
+                        referente aos semestres 201x.x e 201x.x;</span>
+                </li>
+            </ul>
+            </p>
+
+
+            <div
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 10px; margin-top: 150px;">
+                <p style="margin-bottom: 70px;">Pau dos Ferros - RN, <span id="data" class="editable red"
+                        contenteditable="true" style="color: red;">XX de XXXX de
+                        20XX</span>.</p>
+                <div id="signature" class="signature">
+                    Assinatura do Professor
+                </div>
+            </div>
+
+        </div>
+    </form>
+    <div class="button-container">
+        <input type="button" id="generate-pdfdois" value="Gerar PDF">
+    </div>
+</div>
+
+
+</div>
+<!-- fim do segundo arquivo -->
+
+
+
+<!-- Importando html2pdf.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script>
+    document.getElementById('generate-pdf').addEventListener('click', () => {
+        var inputs = document.querySelectorAll('input');
+        inputs.forEach(function (input) {
+            input.style.border = 'none';
+        });
+        const element = document.getElementById('requerimento-form');
+        const opt = {
+            margin: [0, 0, 0, 0],
+            filename: 'requerimento.pdf',
+            image: { type: 'jpeg', quality: 1 },
+            html2canvas: { scale: 1 },
+            jsPDF: { unit: 'cm', format: 'a3', orientation: 'portrait' }
+        };
+        html2pdf().set(opt).from(element).save();
+    });
+</script>
+<script>
+    function prepararCamposParaPDF() {
+        var camposEditaveis = document.querySelectorAll('.editable');
+        camposEditaveis.forEach(function (campo) {
+            campo.style.color = 'black';
+        });
+    }
+
+    // Função para gerar o PDF
+    document.getElementById('generate-pdfdois').addEventListener('click', () => {
+        prepararCamposParaPDF(); // Remove a cor vermelha antes de gerar o PDF
+
+        const element = document.getElementById('requerimento-formdois');
+        const opt = {
+            margin: [0, 2, 0, 2],
+            filename: 'formulario_avaliacao.pdf',
+            image: { type: 'jpeg', quality: 1 },
+            html2canvas: { scale: 1 },
+            jsPDF: { unit: 'cm', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(element).save();
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
     
-    <div class="container">
+    <!-- <div class="container">
         <h1>FORMULÁRIO PARA SOLICITAÇÃO DE AVALIAÇÃO DA CHEFIA IMEDIATA PARA PROCESSO DE AVALIAÇÃO DE ESTÁGIO PROBATÓRIO DOCENTE</h1>
 
         <p>
@@ -62,9 +490,9 @@
         </div>
 
         <button onclick="gerarPDF()">Preencher e Gerar PDF</button>
-    </div>
+    </div> -->
 
-    <script>
+    <!-- <script>
         function gerarPDF() {
             var camposEditaveis = document.querySelectorAll('.editable');
             camposEditaveis.forEach(function(campo) {
@@ -88,5 +516,5 @@
         }
     </script>
 </body>
-</html>
+</html> -->
 
